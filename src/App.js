@@ -9,7 +9,7 @@ import ProductList from "./components/ProductList";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route to="/" element={<Layout />}>
             <Route path="/" element={<Home />}></Route>
