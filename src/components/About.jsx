@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <p>아래 버튼을 누르면 Home으로 돌아갑니다</p>
-      <button>
-        <Link to="/">Home으로 가기</Link>
-      </button>
+      <button onClick={() => navigate("/")}>Home으로 가기</button>
     </div>
   );
 };
